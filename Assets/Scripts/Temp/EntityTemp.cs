@@ -11,6 +11,7 @@ public class EntitySpawner : MonoBehaviour {
             entity.AddComponent(new StatsComponent(100, 15));
             entity.AddComponent(new SelectableComponent(entityGO.GetComponent<SpriteRenderer>()));
             entity.AddComponent(new GroupSelectableComponent());
+            entity.AddComponent(new MovableComponent(3.5f));
             entityGO.GetComponent<EntityMonoLink>().Entity = entity;
         }
     }
